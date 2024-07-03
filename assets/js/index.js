@@ -289,7 +289,7 @@ $(function() {
     stagger: {
       amount: 1
     }
-  }, 'sub+=1')
+  }, 'sub')
 
   cltxlsb.from('.sc-about .text-sub span', 1.8, {
     y: 100,
@@ -299,7 +299,7 @@ $(function() {
     stagger: {
       amount: 1
     }
-  }, 'sub+=2')
+  }, 'sub')
 
 
 
