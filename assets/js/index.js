@@ -165,7 +165,7 @@ $(function() {
 
   // 2-2) 서브 텍스트 & 비디오 등장
   mainTime.from('.main-cont .group-bottom h4', {autoAlpha:0},'main-main+=3')
-  mainTime.from('.sc-visual .video-small', {autoAlpha:0},'main-main+=3')
+  mainTime.from('.sc-visual .video-area', {autoAlpha:0},'main-main+=3')
 
   mainTime.to('.main-cont .group-bottom a',1, {
     autoAlpha:1,
@@ -209,7 +209,7 @@ $(function() {
       },
   })
 
-  visaulTl.to('.sc-visual .video-small .content',{
+  visaulTl.to('.sc-visual .video-area .content',{
     width: "100vw",
     height: "100vh",
     'zIndex' : '500'
@@ -223,17 +223,17 @@ $(function() {
   ScrollTrigger.matchMedia({
 
     "(min-width: 768px)": function() {
-      visaulTl.set('.sc-visual .video-small',{
+      visaulTl.set('.sc-visual .video-area',{
         'align-items': 'center',
         'justify-content': 'center',
         'zIndex' : '500'
       })
-      visaulTl.to('.sc-visual .video-small .content',{
+      visaulTl.to('.sc-visual .video-area .content',{
         width: "100vh",
         height: "100%",
         'zIndex' : '500'
       },'a')
-      visaulTl.to('.sc-visual .video-small .content',{
+      visaulTl.to('.sc-visual .video-area .content',{
         scale:0.3
       },'a')
     },
@@ -254,91 +254,7 @@ $(function() {
 
 
 
- 
-    // 메뉴 텍스트 효과
-    // menutl = gsap.timeline({
-    //   scrollTrigger : {
-    //     trigger: '.menu-ctn',
-    //     start:"10% 50%",        
-    //     end:"100% 90%",      
-    //     markers: true,
-    //     toggleActions:"play none none none",
-    //   },
-    // });
-    // menutl.from('.menu-ctn li', 2, {
-    //   y: 100,
-    //   ease: "power4.out",
-    //   skewY: 7,
-    //   stagger: {
-    //     amount: 0.3
-    //   }
-    // })
-
-
-
-
-
-
-
-
-
-    // --------------- main --------------- 
-    // 비디오
-    // gsap.to('.video-small',{
-    //   scrollTrigger:{
-    //     trigger:'.video-small',
-    //     start:"0% 50%",
-    //     end:"40% 50%",
-    //     // markers: true,
-    //     toggleActions:"play play none reverse",
-    //   },
-    //   "width": "100vw",
-    //   "height": "100vh",
-    // })
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // cubic-bezier(0.47, 1.64, 0.76, 0.56)
-    // 아이콘 애니메이션
-
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-  // --------------- clients --------------- 
+  // --------------- works --------------- 
   var line1swiper = new Swiper(".list-line1", {
     slidesPerView: "auto",
     loop:true,
@@ -377,11 +293,11 @@ $(function() {
 
 
 
-  // --------------- BLOW PAST --------------- 
+  // --------------- about PAST --------------- 
   // 아이콘1
   gsap.to(".picto-ico-star", {
     scrollTrigger: {
-      trigger: '.sc-client',
+      trigger: '.sc-work',
       start:"10% 100%",        
       end:"100% 90%",      
       toggleActions:"none play reverse none",
@@ -397,7 +313,7 @@ $(function() {
   // 아이콘2
   gsap.to(".picto-ico-edit", {
     scrollTrigger: {
-      trigger: '.sc-client',
+      trigger: '.sc-work',
       start:"10% 100%",        
       end:"100% 90%",      
       toggleActions:"none play reverse none",
@@ -413,13 +329,13 @@ $(function() {
   // 텍스트 효과 / 메인
   const cltxl = gsap.timeline({
     scrollTrigger : {
-      trigger: '.sc-history .headline',
+      trigger: '.sc-about .about-headline',
       start:"0% 100%",        
       end:"100% 90%",      
       toggleActions:"play play none reverse",
     },
   });
-  cltxl.from('.sc-history h3 span.line span', 1.8, {
+  cltxl.from('.sc-about h3 span.line span', 1.8, {
     y: 100,
     ease: "power4.out",
     skewY: 7,
@@ -435,14 +351,14 @@ $(function() {
   // 텍스트 효과 / 서브
   const cltxlsb = gsap.timeline({
     scrollTrigger : {
-      trigger: '.sc-history',
+      trigger: '.sc-about',
       start:"10% 30%",        
       end:"100% 50%",  
     },
     onUpdate: changeNumber,
   });
 
-  cltxlsb.from('.sc-history .blow-sub span', 1.8, {
+  cltxlsb.from('.sc-about .about-sub span', 1.8, {
     y: 100,
     ease: "power4.out",
     skewY: 7,
@@ -452,7 +368,7 @@ $(function() {
     }
   }, 'sub+=1')
 
-  cltxlsb.from('.sc-history .text-sub span', 1.8, {
+  cltxlsb.from('.sc-about .text-sub span', 1.8, {
     y: 100,
     ease: "power4.out",
     skewY: 7,
@@ -470,7 +386,7 @@ $(function() {
     var: 16, 
     ease:"linear",
     scrollTrigger: {
-      trigger: ".sc-history .blow-cont",
+      trigger: ".sc-about .about-cont",
       start: "30% 80%",
     },
   })
@@ -516,105 +432,105 @@ $(function() {
 
 
 
-    // --------------- service --------------- 
-    const headTxt = new SplitType('.sc-service .group-top .subject-wrap .subject', { types: 'words, chars', });
+    // --------------- promise --------------- 
+    const headTxt = new SplitType('.sc-promise .group-top .subject-wrap .subject', { types: 'words, chars', });
     sertl = gsap.timeline({
       scrollTrigger:{
-        trigger: ".sc-service",
+        trigger: ".sc-promise",
         start:"0% 0%",
         end:"100% 100%",
         scrub:0,
         onUpdate:function(a) {
           pr = Math.floor(a.progress*100);
-          $('.sc-service .progress-area .per').text(pr + "%");
+          $('.sc-promise .progress-box .per').text(pr + "%");
         }
       }
     })
     // 1번째 텍스트 숫자카운트
-    sertl.to('.sc-service  .subject:first-child .char',{
+    sertl.to('.sc-promise  .subject:first-child .char',{
       y:0,
       stagger:0.01,
-    },'service-first')
-    sertl.to('.sc-service .group-top .step-area .change',{
+    },'promise-first')
+    sertl.to('.sc-promise .group-top .step-box .change',{
       y:'-100%',
-    },'service-first')
+    },'promise-first')
 
     // 2번째 텍스트 숫자카운트
-    sertl.to('.sc-service  .subject:first-child .char',{
+    sertl.to('.sc-promise  .subject:first-child .char',{
       y:'-100%',
       stagger:0.01,
-    },'service-second')
-    sertl.to('.sc-service  .subject:nth-child(2) .char',{
+    },'promise-second')
+    sertl.to('.sc-promise  .subject:nth-child(2) .char',{
       y:0,
       stagger:0.01,
-    },'service-second')
-    sertl.to('.sc-service .group-top .step-area .change',{
+    },'promise-second')
+    sertl.to('.sc-promise .group-top .step-box .change',{
       y:'-200%',
-    },'service-second')
+    },'promise-second')
 
     // 3번째 텍스트 숫자카운트
-    sertl.to('.sc-service  .subject:nth-child(2) .char',{
+    sertl.to('.sc-promise  .subject:nth-child(2) .char',{
       y:'-100%',
       stagger:0.01,
-    },'service-third')
-    sertl.to('.sc-service  .subject:nth-child(3) .char',{
+    },'promise-third')
+    sertl.to('.sc-promise  .subject:nth-child(3) .char',{
       y:0,
       stagger:0.01,
-    },'service-third')
-    sertl.to('.sc-service .group-top .step-area .change',{
+    },'promise-third')
+    sertl.to('.sc-promise .group-top .step-box .change',{
       y:'-300%',
-    },'service-third')
+    },'promise-third')
 
     // 4번째 텍스트 숫자카운트
-    sertl.to('.sc-service  .subject:nth-child(3) .char',{
+    sertl.to('.sc-promise  .subject:nth-child(3) .char',{
       y:'-100%',
       stagger:0.01,
-    },'service-four')
-    sertl.to('.sc-service  .subject:nth-child(4) .char',{
+    },'promise-four')
+    sertl.to('.sc-promise  .subject:nth-child(4) .char',{
       y:0,
       stagger:0.01,
-    },'service-four')
-    sertl.to('.sc-service .group-top .step-area .change',{
+    },'promise-four')
+    sertl.to('.sc-promise .group-top .step-box .change',{
       y:'-400%',
-    },'service-four')
+    },'promise-four')
 
     // 5번째 텍스트 숫자카운트
-    sertl.to('.sc-service  .subject:nth-child(4) .char',{
+    sertl.to('.sc-promise  .subject:nth-child(4) .char',{
       y:'-100%',
       stagger:0.01,
-    },'service-five')
-    sertl.to('.sc-service  .subject:nth-child(5) .char',{
+    },'promise-five')
+    sertl.to('.sc-promise  .subject:nth-child(5) .char',{
       y:0,
       stagger:0.01,
-    },'service-five')
-    sertl.to('.sc-service .group-top .step-area .change',{
+    },'promise-five')
+    sertl.to('.sc-promise .group-top .step-box .change',{
       y:'-500%',
-    },'service-five')
+    },'promise-five')
 
 
 
 
     // progress bar
-    sertl.to('.sc-service .curr',1, { 
+    sertl.to('.sc-promise .curr',1, { 
       width:'20%'
-    },'service-first')
-    sertl.to('.sc-service .curr',1, { 
+    },'promise-first')
+    sertl.to('.sc-promise .curr',1, { 
       width:'40%'
-    },'service-second')
-    sertl.to('.sc-service .curr',1, { 
+    },'promise-second')
+    sertl.to('.sc-promise .curr',1, { 
       width:'60%'
-    },'service-third')
-    sertl.to('.sc-service .curr',1, { 
+    },'promise-third')
+    sertl.to('.sc-promise .curr',1, { 
       width:'80%'
-    },'service-four')
-    sertl.to('.sc-service .curr',1, { 
+    },'promise-four')
+    sertl.to('.sc-promise .curr',1, { 
       width:'100%'
-    },'service-five')
+    },'promise-five')
 
 
 
 
-    gsap.to(".sc-service .ico-level", { duration: 10, x: 200, repeat: -1, yoyo: true});
+    gsap.to(".sc-promise .ico-level", { duration: 10, x: 200, repeat: -1, yoyo: true});
 
 
 
@@ -625,7 +541,7 @@ $(function() {
 
     const timer = gsap.timeline({
       scrollTrigger: {
-        trigger:  ".sc-service",
+        trigger:  ".sc-promise",
         scrub: true,
         start: "top top",
         end: "+=" + (durationInSeconds * 10) + "%", 
@@ -658,14 +574,14 @@ $(function() {
 
     // rec 애니메이션
     // setInterval(()=> {
-    //   $('.sc-service .group-bottom .rec-area .circ').addClass('on');
+    //   $('.sc-promise .group-bottom .rec-area .circ').addClass('on');
     //   recAnimation()
     // },500)
 
     // recAnimation();
     // function recAnimation() {
     //   setTimeout(()=> {
-    //     $('.sc-service .group-bottom .rec-area .circ').removeClass('on');
+    //     $('.sc-promise .group-bottom .rec-area .circ').removeClass('on');
     //   },1000)
     // }
 
@@ -687,7 +603,7 @@ $(function() {
 
     // 영역들어오면 로고 반전
     // $(window).scroll(function(){
-    //   var here = $("#sc-new").offset().top;
+    //   var here = $("#sc-month").offset().top;
     //   var height = $(document).scrollTop();
 
     //   if(here < height){
@@ -703,7 +619,7 @@ $(function() {
 
     asdas22 = gsap.timeline({
       scrollTrigger:{
-        trigger: ".sc-new",
+        trigger: ".sc-month",
         start:"0% 0%",
         end:"100% 100%",
         scrub:0,
@@ -711,23 +627,23 @@ $(function() {
         invalidateOnRefresh: true, 
       }
     })
-    asdas22.to('.sc-new .wrap',{
+    asdas22.to('.sc-month .wrap',{
       xPercent:-100,
       x:function(){
         return window.innerWidth;
       }
     },'a')
-    asdas22.to('.sc-new .marker',{
+    asdas22.to('.sc-month .marker',{
       left:'100%'
     },'a')
 
 
-    gsap.to(".sc-new .box", {
+    gsap.to(".sc-month .box", {
       y: -120,
       backgroundColor: "#1e90ff",
       ease: "none",
       scrollTrigger: {
-        trigger: ".sc-new .box",
+        trigger: ".sc-month .box",
         containerAnimation: asdas22,
         start: "0% 50%",
         end: "100% 50%",
@@ -738,15 +654,15 @@ $(function() {
 
 
 
-    gsap.set(".sc-new .black-area .subtitle .subtitle-seco", {
+    gsap.set(".sc-month .black-area .subtitle .subtitle-seco", {
       "transform": "translateX(5%)",
     });
 
-    gsap.to(".sc-new .black-area .subtitle .subtitle-seco", {
+    gsap.to(".sc-month .black-area .subtitle .subtitle-seco", {
       "transform": "translateX(-13%)",
       ease: "none",
       scrollTrigger: {
-        trigger: ".sc-new .subtitle div",
+        trigger: ".sc-month .subtitle div",
         containerAnimation: asdas22,
         start: "0% 60%",
         end: "100% 60%",
@@ -754,11 +670,11 @@ $(function() {
       }
     }, 'black');
 
-    gsap.to(".sc-new .area-block .block-group-line-1", {
+    gsap.to(".sc-month .area-block .block-group-line-1", {
       "transform": "translateX(-40%)",
       ease: "none",
       scrollTrigger: {
-        trigger: ".sc-new .first-block",
+        trigger: ".sc-month .first-block",
         containerAnimation: asdas22,
         start: "0% 60%",
         end: "100% 60%",
@@ -766,11 +682,11 @@ $(function() {
       }
     }, 'black');
 
-    gsap.to(".sc-new .area-block .block-group-line-2", {
+    gsap.to(".sc-month .area-block .block-group-line-2", {
       "transform": "translateX(-10%)",
       ease: "none",
       scrollTrigger: {
-        trigger: ".sc-new .first-block",
+        trigger: ".sc-month .first-block",
         containerAnimation: asdas22,
         start: "0% 60%",
         end: "100% 60%",
@@ -778,11 +694,11 @@ $(function() {
       }
     }, 'black');
 
-    gsap.to(".sc-new .area-block .block-group-line-3", {
+    gsap.to(".sc-month .area-block .block-group-line-3", {
       "transform": "translateX(-20%)",
       ease: "none",
       scrollTrigger: {
-        trigger: ".sc-new .first-block",
+        trigger: ".sc-month .first-block",
         containerAnimation: asdas22,
         start: "0% 60%",
         end: "100% 60%",
@@ -791,11 +707,11 @@ $(function() {
     }, 'black');
 
 
-    gsap.to(".sc-new .white-area .subtitle .subtitle-seco", {
+    gsap.to(".sc-month .white-area .subtitle .subtitle-seco", {
       "transform": "translateY(-10%)",
       ease: "none",
       scrollTrigger: {
-        trigger: ".sc-new .subtitle div",
+        trigger: ".sc-month .subtitle div",
         containerAnimation: asdas22,
         start: "0% 60%",
         end: "100% 60%",
@@ -808,24 +724,24 @@ $(function() {
 
   const maker = gsap.timeline({
     scrollTrigger:{
-      trigger: ".sc-new .white-area",
+      trigger: ".sc-month .white-area",
       start:"0% 50%",
       end:"0% 50%",
       scrub:1,
       containerAnimation: asdas22,
     }
   })
-  maker.to(".sc-new .marker img", {
+  maker.to(".sc-month .marker img", {
     "filter" : 'invert(100%)'
   }, 'marker');
-  maker.to(".sc-new .marker .line", {
+  maker.to(".sc-month .marker .line", {
     'background' : '#000'
   }, 'marker');
 
 
   const newVd = gsap.timeline({
     scrollTrigger:{
-      trigger: ".sc-new .new-video-area",
+      trigger: ".sc-month .new-video-area",
       start:"100% 50%",
       end:"100% 100%",
       // markers: true,
@@ -833,11 +749,11 @@ $(function() {
       containerAnimation: asdas22,
     }
   })
-  newVd.set('.sc-new .new-video-area', {
+  newVd.set('.sc-month .new-video-area', {
     width:'100vw',
      height:'100vh' 
   },'vd')
-  newVd.to('.sc-new .new-video-area .content',{
+  newVd.to('.sc-month .new-video-area .content',{
     width: "100vh",
     height: "100%",
   },'vd')
@@ -875,12 +791,12 @@ $(function() {
     // 텍스트 효과
     const nmtxl = gsap.timeline({
       scrollTrigger : {
-        trigger: '.sc-never',
+        trigger: '.sc-grow',
         start:"10% 90%",        
         end:"100% 90%",      
       },
     });
-    nmtxl.from('.sc-never .hi-title .hero-line span', 1.8, {
+    nmtxl.from('.sc-grow .main-area .hero-line span', 1.8, {
       y: 100,
       ease: "power4.out",
       skewY: 7,
@@ -892,12 +808,12 @@ $(function() {
 
     const nmtxls = gsap.timeline({
       scrollTrigger : {
-        trigger: '.sc-never .hi-title',
+        trigger: '.sc-grow .main-area',
         start:"30% 80%",        
         end:"100% 90%",      
       },
     });
-    nmtxls.from('.sc-never .hi-desc .hero-line div', 1.8, {
+    nmtxls.from('.sc-grow .col-left .hero-line div', 1.8, {
       y: 100,
       ease: "power4.out",
       skewY: 7,
@@ -907,7 +823,7 @@ $(function() {
       }
     }, 'sub-line')
 
-    nmtxls.from('.sc-never .hi-text .hi-stat .hero-line div', 1.8, {
+    nmtxls.from('.sc-grow .sub-area .col-right .hero-line div', 1.8, {
       y: 100,
       ease: "power4.out",
       skewY: 7,
@@ -933,13 +849,13 @@ $(function() {
     // 텍스트 효과
     const dutxl = gsap.timeline({
       scrollTrigger : {
-        trigger: '.sc-drop',
+        trigger: '.sc-contact',
         start:"10% 90%",        
         end:"100% 90%",        
         // markers: true,
       },
     });
-    dutxl.from('.sc-drop .hero-line span', 2, {
+    dutxl.from('.sc-contact .hero-line span', 2, {
       y: 100,
       ease: "power4.out",
       skewY: 7,
