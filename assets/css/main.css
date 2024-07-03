@@ -885,12 +885,12 @@
     padding-right: 200px;
 }
 .sc-month .area .text img {
-    width: 10%;
+    width: 30%;
 }
 .sc-month .area .title {
     display: block;
     font-size: 48vw;
-    margin-right: 50px;
+    margin-right: 100px;
     font-weight: 500;
 }
 
@@ -898,7 +898,7 @@
     font-size: 8.6vw;
     font-weight: 500;
     line-height: 1.04;
-    padding-left: 100px;
+    padding-left: 300px;
 }
 .sc-month .area .subtitle span {
     position: relative;
@@ -942,7 +942,7 @@
     z-index: 100;
 }
 .sc-month .marker .line {
-    width: 1px;
+    width: 3px;
     height: 100%;
     background-color: #fff;
 }
@@ -953,11 +953,7 @@
 .sc-month .marker.on .line {
     background: #000;
 }
-.sc-month .box {
-    width: 100px;
-    height: 100px;
-    background: #0f0;
-}
+
 .sc-month .area-block {
     bottom: 0;
     display: flex;
@@ -985,7 +981,7 @@
     align-items: flex-start;
     display: flex;
     border: 1px solid #fff;
-    height: 30px;
+    height: 80px;
     background: #fff;
 }
 
@@ -1562,6 +1558,17 @@
     }
     .sc-contact .group-btn {
         margin-top: 30px;
+    }
+    
+    .sc-month .area .title {
+        font-size: 500px;
+    }
+    .sc-month .area .subtitle {
+        font-size: 80px;
+        padding-left: 50px;
+    }
+    .sc-month .area.black-area .subtitle {
+        padding-left: 200px;
     }
 
 }

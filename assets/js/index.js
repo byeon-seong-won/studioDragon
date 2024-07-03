@@ -31,38 +31,6 @@ $(function() {
 
 
 
-  
-
-  // CYCLOPS CLUB 호버
-  $('.cyclops').hover(function() {
-    $(this).removeClass('hover');
-    $('.main-cont .group-top .club').addClass('hover');
-  }, function() {
-    $(this).addClass('hover');
-    $('.main-cont .group-top .club').removeClass('hover');
-  })
-
-
-
-
-
-  // --------------- menu --------------- 
-  // 메뉴 클릭시
-  $('.btn-menu').click(function() {
-      $('#gnb').addClass('on');
-  })
-  $('.menu-close').click(function() {
-      $('#gnb').removeClass('on');
-  });
-
-
-
-
-
-
-
-
-
 
 
 
@@ -158,8 +126,6 @@ $(function() {
       amount: 1
     }
   },'main-main+=2')
-  // mainTime.to('.sc-visual .group-top .cyclops',{width : '100%'})
-
 
 
 
@@ -204,8 +170,6 @@ $(function() {
         start:"0% 0%",
         end:"100% 100%",
         scrub:0,
-        // markers: true,
-        // toggleActions:"play play none reverse",
       },
   })
 
@@ -221,7 +185,6 @@ $(function() {
 
 
   ScrollTrigger.matchMedia({
-
     "(min-width: 768px)": function() {
       visaulTl.set('.sc-visual .video-area',{
         'align-items': 'center',
@@ -232,15 +195,12 @@ $(function() {
         width: "100vh",
         height: "100%",
         'zIndex' : '500'
-      },'a')
+      },'video')
       visaulTl.to('.sc-visual .video-area .content',{
         scale:0.3
-      },'a')
+      },'video')
     },
-  
-    
-  
-  
+
   });
 
   
@@ -252,48 +212,7 @@ $(function() {
 
 
 
-
-
-  // --------------- works --------------- 
-  var line1swiper = new Swiper(".list-line1", {
-    slidesPerView: "auto",
-    loop:true,
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: false
-    },
-    speed: 2000,
-    allowTouchMove:false
-  });
-
-
-  var line2swiper = new Swiper(".list-line2", {
-    slidesPerView: "auto",
-    loop:true,
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: false
-    },
-    speed: 2000,
-    allowTouchMove:false
-  });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // --------------- about PAST --------------- 
+  // --------------- sc-work --------------- 
   // 아이콘1
   gsap.to(".picto-ico-star", {
     scrollTrigger: {
@@ -326,6 +245,10 @@ $(function() {
   });
 
 
+
+
+
+  // --------------- sc-about --------------- 
   // 텍스트 효과 / 메인
   const cltxl = gsap.timeline({
     scrollTrigger : {
@@ -411,10 +334,9 @@ $(function() {
 
 
     
-    // --------------- banner --------------- 
+    // --------------- sc-banner --------------- 
     // gsap.to(".ico-smile", { duration: 2.5, rotate: 720, repeat: -1, yoyo: true});
     // 슬라이드
-
     bannertl = gsap.timeline({
       scrollTrigger:{
         trigger:'.sc-banner',
@@ -432,7 +354,7 @@ $(function() {
 
 
 
-    // --------------- promise --------------- 
+    // --------------- sc-promise --------------- 
     const headTxt = new SplitType('.sc-promise .group-top .subject-wrap .subject', { types: 'words, chars', });
     sertl = gsap.timeline({
       scrollTrigger:{
@@ -557,34 +479,6 @@ $(function() {
     });
 
 
-    // timer.to("#remtime", {
-    //   duration: durationInSeconds,
-    //   innerHTML: initialTime, 
-    //   snap: {
-    //     innerHTML: 1, 
-    //   },
-    // });
-
-
-
-
-
-
-
-
-    // rec 애니메이션
-    // setInterval(()=> {
-    //   $('.sc-promise .group-bottom .rec-area .circ').addClass('on');
-    //   recAnimation()
-    // },500)
-
-    // recAnimation();
-    // function recAnimation() {
-    //   setTimeout(()=> {
-    //     $('.sc-promise .group-bottom .rec-area .circ').removeClass('on');
-    //   },1000)
-    // }
-
     const circElement = document.querySelector('.circ');
     setInterval(() => {
         circElement.classList.add('on');
@@ -615,9 +509,7 @@ $(function() {
 
 
 
-
-
-    asdas22 = gsap.timeline({
+    monthTl = gsap.timeline({
       scrollTrigger:{
         trigger: ".sc-month",
         start:"0% 0%",
@@ -627,99 +519,82 @@ $(function() {
         invalidateOnRefresh: true, 
       }
     })
-    asdas22.to('.sc-month .wrap',{
+    monthTl.to('.sc-month .wrap',{
       xPercent:-100,
       x:function(){
         return window.innerWidth;
       }
     },'a')
-    asdas22.to('.sc-month .marker',{
+    monthTl.to('.sc-month .marker',{
       left:'100%'
     },'a')
 
-
+    gsap.set(".sc-month .box", {
+      "transform": "translateX(20%)",
+    });
     gsap.to(".sc-month .box", {
-      y: -120,
-      backgroundColor: "#1e90ff",
+     "transform": "translateX(-35%)",
       ease: "none",
       scrollTrigger: {
         trigger: ".sc-month .box",
-        containerAnimation: asdas22,
+        containerAnimation: monthTl,
         start: "0% 50%",
         end: "100% 50%",
         scrub: true,
-        // markers: true
       }
     });
 
 
-
-    gsap.set(".sc-month .black-area .subtitle .subtitle-seco", {
-      "transform": "translateX(5%)",
-    });
-
-    gsap.to(".sc-month .black-area .subtitle .subtitle-seco", {
-      "transform": "translateX(-13%)",
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".sc-month .subtitle div",
-        containerAnimation: asdas22,
-        start: "0% 60%",
-        end: "100% 60%",
-        scrub: true,
-      }
-    }, 'black');
-
-    gsap.to(".sc-month .area-block .block-group-line-1", {
-      "transform": "translateX(-40%)",
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".sc-month .first-block",
-        containerAnimation: asdas22,
-        start: "0% 60%",
-        end: "100% 60%",
-        scrub: true,
-      }
-    }, 'black');
-
-    gsap.to(".sc-month .area-block .block-group-line-2", {
+    gsap.set(".sc-month .black-area .subtitle .subtitle-first", {
       "transform": "translateX(-10%)",
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".sc-month .first-block",
-        containerAnimation: asdas22,
-        start: "0% 60%",
-        end: "100% 60%",
-        scrub: true,
-      }
-    }, 'black');
-
-    gsap.to(".sc-month .area-block .block-group-line-3", {
-      "transform": "translateX(-20%)",
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".sc-month .first-block",
-        containerAnimation: asdas22,
-        start: "0% 60%",
-        end: "100% 60%",
-        scrub: true,
-      }
-    }, 'black');
-
-
-    gsap.to(".sc-month .white-area .subtitle .subtitle-seco", {
-      "transform": "translateY(-10%)",
+    });
+    gsap.set(".sc-month .black-area .subtitle .subtitle-seco", {
+      "transform": "translateX(10%)",
+    });
+    gsap.to(".sc-month .black-area .subtitle .subtitle-first", {
+      "transform": "translateX(20%)",
       ease: "none",
       scrollTrigger: {
         trigger: ".sc-month .subtitle div",
-        containerAnimation: asdas22,
+        containerAnimation: monthTl,
+        start: "10% 30%",
+        end: "100% 60%",
+        scrub: true,
+      }
+    }, 'black');
+    gsap.to(".sc-month .black-area .subtitle .subtitle-seco", {
+      "transform": "translateX(-20%)",
+      "border" : "0.3rem solid rgb(255, 255, 255)",
+      "border-radius" : "40px",
+      "padding" : "20px",
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".sc-month .subtitle div",
+        containerAnimation: monthTl,
+        start: "10% 30%",
+        end: "100% 60%",
+        scrub: true,
+      }
+    }, 'black');
+
+
+    gsap.set(".sc-month .white-area .subtitle .subtitle-seco", {
+      "transform": "translateX(30%)",
+    });
+    gsap.to(".sc-month .white-area .subtitle .subtitle-seco", {
+      "transform": "translateX(-20%)",
+      "border" : "0.3rem solid #000",
+      "border-radius" : "40px",
+      "padding" : "20px",
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".sc-month .subtitle div",
+        containerAnimation: monthTl,
         start: "0% 60%",
         end: "100% 60%",
         scrub: true,
       }
     });
-  
-
 
 
   const maker = gsap.timeline({
@@ -728,7 +603,7 @@ $(function() {
       start:"0% 50%",
       end:"0% 50%",
       scrub:1,
-      containerAnimation: asdas22,
+      containerAnimation: monthTl,
     }
   })
   maker.to(".sc-month .marker img", {
@@ -739,55 +614,13 @@ $(function() {
   }, 'marker');
 
 
-  const newVd = gsap.timeline({
-    scrollTrigger:{
-      trigger: ".sc-month .new-video-area",
-      start:"100% 50%",
-      end:"100% 100%",
-      // markers: true,
-      scrub:1,
-      containerAnimation: asdas22,
-    }
-  })
-  newVd.set('.sc-month .new-video-area', {
-    width:'100vw',
-     height:'100vh' 
-  },'vd')
-  newVd.to('.sc-month .new-video-area .content',{
-    width: "100vh",
-    height: "100%",
-  },'vd')
-
-
-
- 
 
 
 
 
 
 
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // --------------- Never miss --------------- 
+    // --------------- sc-grow --------------- 
     // 텍스트 효과
     const nmtxl = gsap.timeline({
       scrollTrigger : {
@@ -845,7 +678,7 @@ $(function() {
 
 
     
-    // --------------- Drop us --------------- 
+    // --------------- sc-contact --------------- 
     // 텍스트 효과
     const dutxl = gsap.timeline({
       scrollTrigger : {
@@ -866,14 +699,6 @@ $(function() {
     })
 
 
-
-
-
-
-
-
-
-   
 
 
 
