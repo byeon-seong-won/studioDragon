@@ -12,15 +12,19 @@
 #header {
     left: 0;
     position: fixed;
-    top: 24px;
+    top: 0;
     width: 100%;
     z-index: 3;
     color: #000;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
 }
 #header .header-inner {
     display: flex;
     justify-content: space-between;
     padding: 0 40px;
+    height: 80px;
+    align-items: center;
 }
 #header .header-item {
     display: flex;
@@ -261,12 +265,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     font-weight: bold;
     height: 100px;
     width: 100px;
     border-radius: 50%;
     text-transform: uppercase;
-    border: 0.12rem solid #000;
+    border: 0.15rem solid #000;
     transition: 0.3s;
 }
 #footer .col-right .btn-area:hover {
@@ -355,10 +360,32 @@
 
 
 
+/* 1440px~1025px */
+@media (max-width:1440px) {
 
+    #header .header-inner {
+        height: 60px;
+    }
+    #header .logo-area img {
+        height: 45px;
+    }
+    #footer .col-right {
+        width: 60%;
+    }
+
+
+}
 
 /* 모바일  767px~320px */
 @media (max-width:1024px) {
+
+    #header .logo-area img {
+        height: 32px;
+    }
+
+    #header .header-inner {
+        padding: 0 20px;
+    }
     #footer {
         height: auto;
         padding-bottom: 0;
@@ -367,16 +394,48 @@
     #footer .footer-top {
         padding: 0 20px;
     }
-
-    #header .logo-area img {
-        height: 32px;
+    #footer .col-right {
+        width: 100%;
     }
-    #header .header-inner {
-        padding: 0 20px;
+    #footer .footer-top {
+        flex-direction: column-reverse;
+    }
+    #footer .footer-marquee .list .item img {
+        width: 100px;
     }
 
-    #main-footer .footer-top {
+}
+
+
+
+/* 모바일  767px~320px */
+@media (max-width:768px) {
+    #footer {
+        padding-top: 30px;
+    }
+    #footer .footer-top {
         flex-direction: column;
+    }
+    #footer .col-right {
+        flex-direction: column;
+    }
+    #footer .sns-area ul {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    #footer .footer-marquee .list .item img {
+        width: 80px;
+    }
+
+    #footer .col-left p {
+        margin-bottom: 3px;
+    }
+    #footer .footer-bottom {
+        margin-top: 80px;
+    }
+    #footer .col-right .btn-area {
+       display: none;
     }
 
 
