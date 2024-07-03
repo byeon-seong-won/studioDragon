@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'PPNeueMontreal';
+    src: url('../font/PPNeueMontreal-Thin.woff') format('woff');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'PPNeueMontreal';
+    src: url('../font/PPNeueMontreal-Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'PPNeueMontreal';
+    src: url('../font/PPNeueMontreal-Medium.woff') format('woff');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'PPNeueMontreal';
+    src: url('../font/PPNeueMontreal-Bold.woff') format('woff');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'PPNeueMontreal';
+    src: url('../font/PPNeueMontreal-SemiBolditalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'PPNeueMontreal';
+    src: url('../font/PPNeueMontreal-Book.woff') format('woff');
+    font-weight: 900;
+}
