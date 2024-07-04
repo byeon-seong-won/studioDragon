@@ -34,9 +34,13 @@
 #header .logo-area {
     justify-content: flex-start;
 }
-#header .logo-area img {
+#header .logo-area a {
+    display: flex;
+    align-items: center;
     height: 64px;
+    border: 1px solid #000;
 }
+
 #header .logo-area img.invert {
     filter: invert(100%);
 }
