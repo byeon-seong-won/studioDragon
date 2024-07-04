@@ -533,7 +533,7 @@ $(function() {
       "transform": "translateX(20%)",
     });
     gsap.to(".sc-month .box", {
-     "transform": "translateX(-35%)",
+     "transform": "translateX(-20%)",
       ease: "none",
       scrollTrigger: {
         trigger: ".sc-month .box",
@@ -625,7 +625,7 @@ $(function() {
     const nmtxl = gsap.timeline({
       scrollTrigger : {
         trigger: '.sc-grow',
-        start:"10% 90%",        
+        start:"10% 100%",        
         end:"100% 90%",      
       },
     });

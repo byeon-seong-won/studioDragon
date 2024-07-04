@@ -1225,6 +1225,30 @@
 
 
 
+/* 1900px~1441px */
+@media (max-width:1900px) {
+
+    .sc-promise .group-top .left-area .headline {
+        font-size: 80px;
+    }
+    .sc-promise .group-top .right-area .step-box .num {
+        font-size: 304px;
+    }
+
+    .sc-promise .group-top .left-area .subject-wrap .subject {
+        font-size: 30px;
+    }
+
+
+
+}
+
+
+
+
+
+
+
 
 
 /* 1440px~1025px */
