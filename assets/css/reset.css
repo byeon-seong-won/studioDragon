@@ -16,8 +16,8 @@ body {
     font-family: PPNeueMontreal;
     text-transform: uppercase;
     font-weight: bold;
-    /* background-color: rgb(calc(255 - 5),calc(255 - 6),calc(255 - 9)); */
-    background: #fff;
+    background-color: rgb(calc(255 - 5),calc(255 - 6),calc(255 - 9));
+    /* background: #fff; */
     color: rgb(calc(250 - 255),calc(249 - 255),calc(246 - 255));
     /* white-space:nowrap; */
 }

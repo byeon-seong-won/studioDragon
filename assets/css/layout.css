@@ -16,8 +16,8 @@
     width: 100%;
     z-index: 3;
     color: #000;
-    background: #fff;
-    border-bottom: 1px solid #ccc;
+    /* background: #fff;
+    border-bottom: 1px solid #ccc; */
 }
 #header .header-inner {
     display: flex;
