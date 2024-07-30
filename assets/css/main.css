@@ -125,7 +125,6 @@
 .sc-visual .ico-smile {
     width: 130px;
 }
-
 .sc-visual .main-cont .group-top .cyclops.hover {
     border-radius: 130px;
     display:inline-block;
@@ -182,7 +181,6 @@
     height: 100%;
     object-fit: cover;
 }
-
 .sc-visual .video-area video {
     width: 100%;
 }
@@ -216,12 +214,10 @@
 .sc-visual .main-cont .group-center .hero-picto svg.ico-arrow {
     width: 55%;
 }
-
 .sc-visual .main-cont .group-center .hero-picto.hero-picto-ani {
     display: flex;
     gap: 5px;
 }
-
 .sc-visual .main-cont .group-bottom {
     text-transform: uppercase;
 }
