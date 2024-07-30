@@ -837,10 +837,12 @@
 }
 .sc-promise .group-bottom .gauge-right .sound-box .sound-level-style {
     fill: #faf9f6;
-    animation: grow01 1.5s infinite linear alternate-reverse;
+}
+.sc-promise .group-bottom .gauge-right .sound-box .group-1 .sound-level-style {
+    animation: grow01 1s infinite linear alternate-reverse;
 }
 .sc-promise .group-bottom .gauge-right .sound-box .group-2 .sound-level-style {
-    animation: grow02 1s infinite linear alternate;
+    animation: grow02 1.5s infinite linear alternate;
     animation-delay: 2s;
 }
 
