@@ -1602,7 +1602,7 @@
     .sc-visual .main-cont .group-center {
         width: 90%;
         margin-bottom: 0;
-        line-height: unset;
+        line-height: 1;
     }
     .sc-visual .main-cont .group-center .hero-picto.hero-picto-ani {
        display: none;
