@@ -567,6 +567,8 @@ $(function() {
       "border" : "0.3rem solid rgb(255, 255, 255)",
       "border-radius" : "40px",
       "padding" : "20px",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(51, 51, 51)",
       ease: "none",
       scrollTrigger: {
         trigger: ".sc-month .subtitle div",
@@ -574,18 +576,16 @@ $(function() {
         start: "10% 30%",
         end: "100% 60%",
         scrub: true,
+        duration : 5,
       }
     }, 'black');
 
-
-    gsap.set(".sc-month .white-area .subtitle .subtitle-seco", {
-      "transform": "translateX(30%)",
-    });
     gsap.to(".sc-month .white-area .subtitle .subtitle-seco", {
-      "transform": "translateX(-20%)",
       "border" : "0.3rem solid #000",
       "border-radius" : "40px",
       "padding" : "20px",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(51, 51, 51)",
       ease: "none",
       scrollTrigger: {
         trigger: ".sc-month .subtitle div",
@@ -596,7 +596,6 @@ $(function() {
       }
     });
 
-
   const maker = gsap.timeline({
     scrollTrigger:{
       trigger: ".sc-month .white-area",
@@ -604,6 +603,7 @@ $(function() {
       end:"0% 50%",
       scrub:1,
       containerAnimation: monthTl,
+      markers: true,
     }
   })
   maker.to(".sc-month .marker img", {
@@ -612,6 +612,7 @@ $(function() {
   maker.to(".sc-month .marker .line", {
     'background' : '#000'
   }, 'marker');
+
 
 
 

@@ -784,7 +784,8 @@
     width: 35%;
 }
 .sc-promise .group-bottom .gauge-left .thumb-box img {
-    width: 100%;
+    object-fit: contain;
+    height: 100%;
 }
 .sc-promise .group-bottom .gauge-left .info-box {
     display: flex;
@@ -901,6 +902,7 @@
 }
 .sc-month .area .text img {
     width: 30%;
+    filter: grayscale(1);
 }
 .sc-month .area .title {
     display: block;
@@ -911,7 +913,7 @@
 .sc-month .area .subtitle {
     font-size: 8.6vw;
     font-weight: 500;
-    line-height: 1.04;
+    line-height: 1;
     padding-left: 300px;
 }
 .sc-month .area .subtitle span {
@@ -1036,7 +1038,6 @@
     overflow: hidden;
     position: absolute;
     right: 0;
-    height: 400px;
     width: 600px;
 }
 .sc-grow .img-area img {
@@ -1241,13 +1242,9 @@
     .sc-promise .group-top .right-area .step-box .num {
         font-size: 304px;
     }
-
     .sc-promise .group-top .left-area .subject-wrap .subject {
         font-size: 30px;
     }
-
-
-
 }
 
 
@@ -1312,9 +1309,6 @@
     .sc-promise .group-bottom .gauge-left .info-box {
         font-size: 14px;
     }
-    .sc-grow .main-area {
-        font-size: 5vw;
-    }
     .sc-promise .group-bottom .rec-area p {
         font-size: 30px;
     }
@@ -1322,9 +1316,15 @@
         width: 35px;
         height: 35px;
     }
+    .sc-month {
+        display: none;
+    }
     .sc-grow .img-area {
         height: 400px;
         width: auto;
+    }
+    .sc-grow .main-area {
+        font-size: 5vw;
     }
     .sc-grow .main-area .fadeText .hero-picto {
         margin-top: 0;
@@ -1547,11 +1547,6 @@
         height: 17px;
         margin-top: 0;
     }
-
-    .sc-month .wrap {
-        height: 100vh;
-    }
-
     .sc-grow {
         padding: 100px 20px;
     }
@@ -1590,17 +1585,7 @@
     .sc-contact .group-btn {
         margin-top: 30px;
     }
-    
-    .sc-month .area .title {
-        font-size: 500px;
-    }
-    .sc-month .area .subtitle {
-        font-size: 80px;
-        padding-left: 50px;
-    }
-    .sc-month .area.black-area .subtitle {
-        padding-left: 200px;
-    }
+
 
 }
 
@@ -1619,13 +1604,15 @@
         margin-bottom: 0;
         line-height: unset;
     }
-    .sc-visual .main-cont .group-center .hero-picto {
-        height: 20px;
+    .sc-visual .main-cont .group-center .hero-picto.hero-picto-ani {
+       display: none;
     }
     .sc-visual .main-cont .group-center .line-ctn {
         gap: 3px;
     }
-
+    .sc-visual .main-cont .group-center .line-ctn .ico-eye {
+        display: none;
+    }
     .sc-work .headline {
         font-size: 30px;
         margin-bottom: 50px;
@@ -1676,9 +1663,6 @@
     }
     .sc-promise .group-bottom .gauge-left .thumb-box {
         width: 100%;
-    }
-    .sc-month {
-        display: none;
     }
     .sc-grow {
         padding: 120px 20px 80px;
