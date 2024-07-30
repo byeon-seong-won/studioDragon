@@ -380,18 +380,18 @@
 }
 .sc-work .marquee .item img {margin: 0 10px;}
 @keyframes marquee1 {
-    0%{
+    0% {
         transform: translateX(0);
     }
-    100%{
+    100% {
         transform: translateX(-100%);
     }
 }
 @keyframes marquee2 {
-    0%{
+    0% {
         transform: translateX(0);
     }
-    100%{
+    100% {
         transform: translateX(100%);
     }
 }
@@ -491,7 +491,6 @@
     text-transform: uppercase;
     display: block;
 }
-
 .sc-about .about-bottom {
     display: flex;
 }
@@ -606,7 +605,6 @@
     display: flex;
     flex-direction: column;
 }
-
 .sc-promise .group-top {
     display: flex;
     padding: 100px 40px 0;
