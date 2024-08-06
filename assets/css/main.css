@@ -1,7 +1,6 @@
 
 
 
-
 /* 인트로 영역 */
 .intro {
     position: fixed;
@@ -257,7 +256,6 @@
 .sc-visual .main-cont .group-bottom a:hover img {
     filter: invert(0);
 }
-
 .sc-visual .ico-mov {
     transform-origin: bottom left;
     animation: ico-motion1 1s cubic-bezier(0.47, 1.64, 0.76, 0.56) infinite;
@@ -291,7 +289,6 @@
     font-weight: 500;
     line-height: .9;
 }
-
 .sc-work .headline .works-title-big {
     font-size: 272px;
     font-style: normal;
@@ -315,7 +312,6 @@
     position: absolute;
     width: 100%;
 }
-
 .sc-work .list-line1,
 .sc-work .list-line2 {
     align-items: center;
@@ -339,6 +335,8 @@
     overflow: hidden;
     width: 100%;
 }
+
+
 
 
 
@@ -1559,7 +1557,8 @@
         margin-bottom: 70px;
     }
     .sc-grow .main-area .caps {
-        top: 20px;
+        top: 0;
+        opacity: 0.3;
     }
     .sc-grow .sub-area {
         flex-direction: column;

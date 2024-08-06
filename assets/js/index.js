@@ -220,7 +220,6 @@ $(function() {
       start:"10% 100%",        
       end:"100% 90%",      
       toggleActions:"none play reverse none",
-      // markers: true,
     },
     duration : 2,
     rotate : 720,
@@ -236,7 +235,6 @@ $(function() {
       start:"10% 100%",        
       end:"100% 90%",      
       toggleActions:"none play reverse none",
-      // markers: true,
     },
     duration : 3,
     rotate : 360,
@@ -515,7 +513,6 @@ $(function() {
         start:"0% 0%",
         end:"100% 100%",
         scrub:0,
-        // markers: true,
         invalidateOnRefresh: true, 
       }
     })
@@ -603,7 +600,6 @@ $(function() {
       end:"0% 50%",
       scrub:1,
       containerAnimation: monthTl,
-      markers: true,
     }
   })
   maker.to(".sc-month .marker img", {
@@ -686,7 +682,6 @@ $(function() {
         trigger: '.sc-contact',
         start:"10% 90%",        
         end:"100% 90%",        
-        // markers: true,
       },
     });
     dutxl.from('.sc-contact .hero-line span', 2, {
