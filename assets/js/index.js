@@ -9,6 +9,8 @@ $(function() {
     // });
   
 
+    
+  // --------------- cursor 커스텀 --------------- 
     let mouseCursor = document.querySelector(".cursor");
     //window 객체에 scroll & mouse 이벤트를 추가하고 cursor함수 실행되도록 함
     window.addEventListener("scroll", cursor);
@@ -20,19 +22,12 @@ $(function() {
   }
 
 
-  //   // 마우스 
-//   // $('.img-area').mousemove(function(e) {
-//   //   const pointerHeight = $('.pointer').height();
-//   //               const mouseY = e.offsetY - (pointerHeight / 2);
-//   //               $('.pointer').css("top", mouseY + "px");
-//   // });
+
 
   // --------------- GSAP 공통 효과 --------------- 
   gsap.defaults({
     ease:"none"
   })
-
-
 
 
   // --------------- 전체 부드러운 스크롤 --------------- 

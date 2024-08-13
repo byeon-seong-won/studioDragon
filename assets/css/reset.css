@@ -10,21 +10,16 @@ img, picture, video, canvas, svg {display: block;max-width:100%;}
 button {background:none;border:0;cursor:pointer;}
 a {text-decoration:none}
 table {border-collapse:collapse;border-spacing:0}
-ul {
-    list-style: none;
-}
+ul {list-style: none;}
 
 
 
 body {
-    font-family: PPNeueMontreal;
+    font-family: 'PPNeueMontreal';
     text-transform: uppercase;
     font-weight: bold;
     background-color: rgb(calc(255 - 5),calc(255 - 6),calc(255 - 9));
-    /* background: #fff; */
     color: rgb(calc(250 - 255),calc(249 - 255),calc(246 - 255));
-    /* white-space:nowrap; */
-    cursor: none;
 }
 
 
