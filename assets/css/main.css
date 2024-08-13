@@ -494,24 +494,26 @@
 }
 .sc-about .about-bottom {
     display: flex;
+    gap: 20px;
 }
 .sc-about .about-bottom .img-area {
     display: flex;
     gap: 20px;
+    flex: 1;
 }
 .sc-about .about-bottom .img-area img {
     border-radius: 10px;
+    flex: 1;
     overflow: hidden;
 }
 .sc-about .about-bottom .text-area {
-    font-size: 26px;
+    font-size: 24px;
     line-height: 1.15;
-    margin-left: 100px;
-    width: 25%;
-    font-weight: 500;
+    flex: 1;
+    font-weight: 400;
     display: flex;
     flex-direction: column;
-    color: #444;
+    color: #555;
 }
 .sc-about .about-bottom .text-area .text-sub {
     overflow: hidden;
@@ -1238,6 +1240,9 @@
     .sc-visual .video-area .content {
         width: 300px;
         height: 300px;
+    }
+    .sc-about .about-bottom .text-area {
+        margin-left: 0;
     }
     .sc-promise .group-top .left-area .headline {
         font-size: 80px;
