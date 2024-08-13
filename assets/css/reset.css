@@ -24,6 +24,7 @@ body {
     /* background: #fff; */
     color: rgb(calc(250 - 255),calc(249 - 255),calc(246 - 255));
     /* white-space:nowrap; */
+    cursor: none;
 }
 
 

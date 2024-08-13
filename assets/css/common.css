@@ -6,8 +6,18 @@
     overflow: hidden;
     clip: rect(0,0,0,0);
 }
-
-#wrapper {
-    /* min-width: 1440px; */
-    /* width: 100vw; */
+.cursor {
+    width:15px;
+    height: 15px;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transition-property: background, transform;
+    transform-origin: 100% 100%;
+    backdrop-filter: sepia(20%);
+    background-size: cover;
+    filter: invert(1);
 }

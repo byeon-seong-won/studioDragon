@@ -9,6 +9,23 @@ $(function() {
     // });
   
 
+    let mouseCursor = document.querySelector(".cursor");
+    //window 객체에 scroll & mouse 이벤트를 추가하고 cursor함수 실행되도록 함
+    window.addEventListener("scroll", cursor);
+    window.addEventListener("mousemove", cursor);
+    //커스텀 커서의 left값과 top값을 커서의 XY좌표값과 일치시킴
+    function cursor(e) {
+      mouseCursor.style.left = e.pageX + "px";
+      mouseCursor.style.top = e.pageY - scrollY + "px";
+  }
+
+
+  //   // 마우스 
+//   // $('.img-area').mousemove(function(e) {
+//   //   const pointerHeight = $('.pointer').height();
+//   //               const mouseY = e.offsetY - (pointerHeight / 2);
+//   //               $('.pointer').css("top", mouseY + "px");
+//   // });
 
   // --------------- GSAP 공통 효과 --------------- 
   gsap.defaults({
@@ -191,6 +208,7 @@ $(function() {
     height: "100vh",
     'zIndex' : '500'
   })
+
   visaulTl.set('.sc-visual .inner',{
     autoAlpha:0
   })
