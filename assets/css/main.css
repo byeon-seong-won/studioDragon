@@ -913,7 +913,7 @@
     font-weight: 500;
 }
 .sc-month .area .subtitle {
-    font-size: 8.6vw;
+    font-size: 5vw;
     font-weight: 500;
     line-height: 1;
     padding-left: 300px;
@@ -1175,7 +1175,6 @@
 .sc-contact .hero-line {
     overflow: hidden;
 }
-
 .sc-contact .group-txt {
     font-size: 150px;
     line-height: .9;
@@ -1232,15 +1231,26 @@
 
 
 
+@media (max-width:2100px) {
+    .sc-visual .main-cont .group-center .hero-line:nth-child(1) .hero-picto {
+        width: 80px;
+    }
+    .sc-visual .ico-eye {
+        width: 100px;
+    }
+    
+    .sc-visual .video-area .content {
+        width: 280px;
+        height: 280px;
+    }
+
+}
 
 
-/* 1900px~1441px */
+
 @media (max-width:1900px) {
 
-    .sc-visual .video-area .content {
-        width: 300px;
-        height: 300px;
-    }
+
     .sc-about .about-bottom .text-area {
         margin-left: 0;
     }

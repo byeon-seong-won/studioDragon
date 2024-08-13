@@ -31,6 +31,20 @@ $(function() {
 
 
 
+  // --------------- 메뉴클릭시 --------------- 
+  $('.btn-menu').click(function() {
+    $('#gnb').addClass('on');
+  })
+  $('.btn-close').click(function() {
+    $('#gnb').removeClass('on');
+  })
+
+
+
+
+
+
+
 
 
 
@@ -172,13 +186,11 @@ $(function() {
         scrub:0,
       },
   })
-
   visaulTl.to('.sc-visual .video-area .content',{
     width: "100vw",
     height: "100vh",
     'zIndex' : '500'
   })
-
   visaulTl.set('.sc-visual .inner',{
     autoAlpha:0
   })

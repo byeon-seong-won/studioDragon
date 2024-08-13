@@ -12,12 +12,10 @@
 #header {
     left: 0;
     position: fixed;
-    top: 0;
+    top: 24px;
     width: 100%;
     z-index: 3;
     color: #000;
-    /* background: #fff;
-    border-bottom: 1px solid #ccc; */
 }
 #header .header-inner {
     display: flex;
@@ -80,19 +78,21 @@
     height: 42px;
     width: 42px;
     margin-right: 10px;
-    background: #ddd;
+    background: #000;
 }
 #header .util-area .ico-mail img {
     width: 22px;
+    filter: invert(1);
 }
 #header .util-area .btn-menu {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    background: #999;
+    border: 1px solid #faf9f6;
     border-radius: 50%;
+    display: flex;
     height: 42px;
+    justify-content: center;
     width: 42px;
+    filter: invert(1);
 }
 
 
@@ -119,6 +119,10 @@
 #gnb.on {
     transform: translateY(0);
 }
+#gnb.on .util-area .ico-mail img {
+    filter: none;
+}
+
 #gnb ul {
     color: #fff;
     width: 100%;
@@ -139,8 +143,6 @@
     font-size: 174px;
     font-weight: bold;
 }
-
-
 
 #gnb .menu-header {
     left: 0;
@@ -204,7 +206,7 @@
 #gnb .menu-header .util-area .ico-mail img {
     width: 22px;
 }
-#gnb .menu-header .util-area .menu-close {
+#gnb .menu-header .util-area .btn-close {
     display: flex;
     justify-content: center;
     align-items: center;
