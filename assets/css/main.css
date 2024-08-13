@@ -1259,6 +1259,17 @@
 
 
 
+/* ~1680px*/
+@media (max-width:1680px) {
+    .sc-visual .main-cont .group-center .hero-picto {
+        height: 60px;
+    }
+    .sc-visual .ico-eye {
+        width: 80px;
+    }
+}
+
+
 
 
 
@@ -1298,6 +1309,13 @@
     .sc-about .about-bottom .img img {
         width: 30%;
     }
+    .sc-about .about-cont .col-left {
+        font-size:30px;
+    }
+    .sc-about h3 span.line .hero-picto img {
+        width: 80px;
+        height: 80px;
+    }
     .sc-promise .group-top .left-area .headline {
         font-size: 35px;
     }
@@ -1333,13 +1351,14 @@
     }
     .sc-grow .main-area {
         font-size: 5vw;
+        margin-bottom: 50px;
     }
     .sc-grow .main-area .fadeText .hero-picto {
         margin-top: 0;
         height: 80px;
     }
     .sc-grow .sub-area .col-left {
-        font-size: 35px;
+        font-size: 25px;
     }
     .sc-grow .sub-area .col-right {
         width: 30%;
