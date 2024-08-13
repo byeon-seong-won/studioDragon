@@ -3,13 +3,6 @@
 $(function() {
 
 
-    // 브라우저 resize 처리
-    // window.addEventListener('resize', function() {
-    //   window.location.reload();
-    // });
-  
-
-    
   // --------------- cursor 커스텀 --------------- 
     let mouseCursor = document.querySelector(".cursor");
     //window 객체에 scroll & mouse 이벤트를 추가하고 cursor함수 실행되도록 함
@@ -23,11 +16,11 @@ $(function() {
 
 
 
-
   // --------------- GSAP 공통 효과 --------------- 
   gsap.defaults({
     ease:"none"
   })
+
 
 
   // --------------- 전체 부드러운 스크롤 --------------- 
@@ -43,9 +36,12 @@ $(function() {
 
 
 
+
+
   // --------------- 메뉴클릭시 --------------- 
   $('.btn-menu').click(function() {
     $('#gnb').addClass('on');
+    
   })
   $('.btn-close').click(function() {
     $('#gnb').removeClass('on');
