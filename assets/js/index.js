@@ -40,11 +40,11 @@ $(function() {
 
   // --------------- 메뉴클릭시 --------------- 
   $('.btn-menu').click(function() {
-    $('#gnb').addClass('on');
+    $('.menu-ctn').addClass('on');
     
   })
   $('.btn-close').click(function() {
-    $('#gnb').removeClass('on');
+    $('.menu-ctn').removeClass('on');
   })
 
 
