@@ -85,7 +85,6 @@
 
 /* 메뉴 */
 .menu-ctn {
-    display: table;
     position: fixed;
     left: 0;
     top: 0;
@@ -93,12 +92,17 @@
     height: 100vh;
     z-index: 1000;
     background: #e5252f;
-    transform: translateY(-100%);
     transition: transform .5s;
+    display:none;
 }
-.menu-ctn.on {
+.menu-ctn > div {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+/* .menu-ctn.on {
     transform: translateY(0);
-}
+} */
 .menu-ctn ul {
     color: #fff;
     width: 100%;
@@ -139,7 +143,7 @@
     top: 40px;
 }
 .menu-ctn .menu-header .logo-area img {
-    height: 45px;
+    height: 60px;
 }
 .menu-ctn .menu-header .util-area {
     display: flex;
@@ -178,10 +182,6 @@
     top: 50%;
     transform: translate(-50%,-50%); */
 }
-
-
-
-
 
 
 
@@ -342,7 +342,8 @@
 /* 1900px~1441px */
 @media (max-width:1900px) {
 
-    #header .logo-area img {
+    #header .logo-area img,
+    .menu-ctn .menu-header .logo-area img {
         height: 45px;
     }
 
@@ -366,10 +367,20 @@
 /* 모바일  767px~320px */
 @media (max-width:1024px) {
 
-    #header .logo-area img {
+    #header .logo-area img,
+    .menu-ctn .menu-header .logo-area img {
         height: 32px;
     }
-
+    .menu-ctn .menu-header .logo-area {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        top: 24px;
+        left: 20px;
+    }
+    .menu-ctn .menu-header .util-area {
+        right: 20px;
+    }
     #header .header-inner {
         padding: 0 20px;
     }

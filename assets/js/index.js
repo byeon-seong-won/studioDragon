@@ -39,13 +39,27 @@ $(function() {
 
 
   // --------------- 메뉴클릭시 --------------- 
-  $('.btn-menu').click(function() {
-    $('.menu-ctn').addClass('on');
+  // let subToggle=true;
+  $(".btn-menu").click(function(){
+    $(".menu-ctn").slideDown(500);
+    // subToggle=!subToggle;
+  });
+
+  $(".btn-close").click(function(){
+    $(".menu-ctn").slideUp(500);
+    // subToggle=!subToggle;
+  });
+
+
+
+
+  // $('.btn-menu').click(function() {
+  //   $('.menu-ctn').addClass('on');
     
-  })
-  $('.btn-close').click(function() {
-    $('.menu-ctn').removeClass('on');
-  })
+  // })
+  // $('.btn-close').click(function() {
+  //   $('.menu-ctn').removeClass('on');
+  // })
 
 
 
