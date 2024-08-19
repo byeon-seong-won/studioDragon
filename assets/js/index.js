@@ -39,29 +39,23 @@ $(function() {
 
 
   // --------------- 메뉴클릭시 --------------- 
-  // let subToggle=true;
-  $(".btn-menu").click(function(){
-    $(".menu-ctn").slideDown(500);
-    // subToggle=!subToggle;
+  $(".btn-menu").click(function() {
+    $(".menu-ctn").stop().slideDown(500, function() {
+        gsap.from(".menu-area li span:nth-child(2) > a", {
+            y: 100,
+            ease: "power4.out",
+            skewY: 7,
+            yPercent: 100,
+            stagger: {
+              amount: 1
+            }
+        });
+    });
   });
 
   $(".btn-close").click(function(){
-    $(".menu-ctn").slideUp(500);
-    // subToggle=!subToggle;
+    $(".menu-ctn").stop().slideUp(500);
   });
-
-
-
-
-  // $('.btn-menu').click(function() {
-  //   $('.menu-ctn').addClass('on');
-    
-  // })
-  // $('.btn-close').click(function() {
-  //   $('.menu-ctn').removeClass('on');
-  // })
-
-
 
 
 
