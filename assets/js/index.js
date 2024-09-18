@@ -39,23 +39,23 @@ $(function() {
 
 
   // --------------- 메뉴클릭시 --------------- 
-  $(".btn-menu").click(function() {
-    $(".menu-ctn").stop().slideDown(500, function() {
-        gsap.from(".menu-area li span:nth-child(2) > a", {
-            y: 100,
-            ease: "power4.out",
-            skewY: 7,
-            yPercent: 100,
-            stagger: {
-              amount: 1
-            }
-        });
-    });
-  });
+  // $(".btn-menu").click(function() {
+  //   $(".menu-ctn").stop().slideDown(500, function() {
+  //       gsap.from(".menu-area li span:nth-child(2) > a", {
+  //           y: 100,
+  //           ease: "power4.out",
+  //           skewY: 7,
+  //           yPercent: 100,
+  //           stagger: {
+  //             amount: 1
+  //           }
+  //       });
+  //   });
+  // });
 
-  $(".btn-close").click(function(){
-    $(".menu-ctn").stop().slideUp(500);
-  });
+  // $(".btn-close").click(function(){
+  //   $(".menu-ctn").stop().slideUp(500);
+  // });
 
 
 
